@@ -1,0 +1,19 @@
+/*
+Theme Name: Kids Education
+Theme URI: http://localhost:8113/
+Author: Odenilson
+Author URI: http://localhost:8113/
+Description: A clean and colorful WordPress theme designed specifically for preschools, kindergartens, and childcare centers.
+Version: 1.0
+Text Domain: educacao-infantil
+Tags: education, children, school, preschool, kindergarten, childcare, learning, educational, one-column, custom-menu, custom-logo, featured-images, translation-ready
+*/
+
+
+body{
+    background-color: #ddd;
+}
+
+.top-menu{
+    background-color: #20c997;
+}
