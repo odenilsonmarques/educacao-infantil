@@ -73,6 +73,39 @@
     </div>
 
     <header>
-
-
+        <nav class="navbar navbar-expand-lg navbar-light  py-4">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="" width="" height="" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active fw-bold" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link fw-bold" href="#">Sobre nós</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link fw-bold" href="#">Professores</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link fw-bold" href="#">Classes</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link fw-bold" href="#">Matrículas</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link fw-bold" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#" class="btn btn-custom fw-bold">Entrar em Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>

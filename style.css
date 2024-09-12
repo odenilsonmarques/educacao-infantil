@@ -15,5 +15,30 @@ body{
 }
 
 .top-menu{
-    background-color: #20c997;
+    background-color: #23CC88;
 }
+
+.navbar-light .navbar-nav .nav-item .nav-link.active{
+    color:#23CC88;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+    color:#00394f;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover{
+    color:#23CC88;
+}
+
+.nav-item .btn-custom {
+    background: linear-gradient(45deg, #23CC88, #1EAE76);
+    color: #FFFFFF; /* Cor do texto, ajuste conforme necessário */
+    border: none; /* Remove a borda se necessário */
+}
+
+.btn-custom:hover {
+    color:#00394f;
+}
+
+
+
