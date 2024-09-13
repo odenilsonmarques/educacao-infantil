@@ -18,27 +18,42 @@ body{
     background-color: #23CC88;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link.active{
-    color:#23CC88;
+.main-menu ul {
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0;
+    list-style: none; /* Remove os marcadores de lista (bolinhas) */
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link{
-    color:#00394f;
+.main-menu li {
+    margin-right: 20px; /* Espaçamento horizontal entre os itens */
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link:hover{
-    color:#23CC88;
+.main-menu li:last-child {
+    margin-right: 0; /* Remove o margin do último item para evitar espaçamento extra */
+}
+
+.main-menu li a {
+    color: #00394f;
+    text-decoration: none;
+}
+
+.main-menu li a:hover {
+    color: #23CC88;
 }
 
 .nav-item .btn-custom {
     background: linear-gradient(45deg, #23CC88, #1EAE76);
     color: #FFFFFF; /* Cor do texto, ajuste conforme necessário */
     border: none; /* Remove a borda se necessário */
+    margin-right: 20px;   
 }
 
-.btn-custom:hover {
-    color:#00394f;
+.nav-item .btn-custom:hover{
+    color: #00394f; /* Cor do texto, ajuste conforme necessário */ 
 }
-
 
 
