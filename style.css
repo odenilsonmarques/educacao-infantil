@@ -10,11 +10,11 @@ Tags: education, children, school, preschool, kindergarten, childcare, learning,
 */
 
 
-body{
+body {
     background-color: #ddd;
 }
 
-.top-menu{
+.top-menu {
     background-color: #23CC88;
 }
 
@@ -22,18 +22,21 @@ body{
     font-size: 18px;
     font-weight: 500;
     border-radius: 0;
-    list-style: none; /* Remove os marcadores de lista (bolinhas) */
+    list-style: none;
+    /* Remove os marcadores de lista (bolinhas) */
     padding: 0;
     margin: 0;
     padding-top: 5px;
 }
 
 .main-menu li {
-    margin-right: 20px; /* Espaçamento horizontal entre os itens */
+    margin-right: 20px;
+    /* Espaçamento horizontal entre os itens */
 }
 
 .main-menu li:last-child {
-    margin-right: 0; /* Remove o margin do último item para evitar espaçamento extra */
+    margin-right: 0;
+    /* Remove o margin do último item para evitar espaçamento extra */
 }
 
 .main-menu li a {
@@ -47,13 +50,82 @@ body{
 
 .nav-item .btn-custom {
     background: linear-gradient(45deg, #23CC88, #1EAE76);
-    color: #FFFFFF; /* Cor do texto, ajuste conforme necessário */
-    border: none; /* Remove a borda se necessário */
-    margin-right: 20px;   
+    color: #FFFFFF;
+    /* Cor do texto, ajuste conforme necessário */
+    border: none;
+    /* Remove a borda se necessário */
+    margin-right: 20px;
 }
 
-.nav-item .btn-custom:hover{
-    color: #00394f; /* Cor do texto, ajuste conforme necessário */ 
+.nav-item .btn-custom:hover {
+    color: #00394f;
+    /* Cor do texto, ajuste conforme necessário */
 }
+
+
+/* estilo para o carroussel */
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-image {
+    max-height: 500px;
+    /* Define a altura máxima */
+    width: 100%;
+    /* Mantém a largura 100% responsiva */
+    object-fit: cover;
+    /* Mantém a proporção da imagem sem distorção */
+}
+
+.carousel-caption.text-start {
+    left: 0;
+    right: auto;
+    padding-left: 150px;
+    bottom: 150px;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.carousel-caption p {
+    font-size: 17px;
+    color: #fff
+}
+
+.carousel-caption a {
+    background-color: #1EAE76;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.carousel-caption a:hover {
+    background-color: #23CC88;
+    color: #fff;
+    /* text-decoration: none; */
+}
+
+a.btn:focus {
+    outline: 1px solid #1EAE76; /* Mude a cor para o que quiser */
+    box-shadow: none;
+}
+
+
+
+
 
 

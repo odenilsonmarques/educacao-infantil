@@ -1,5 +1,5 @@
 <?php
-
+require_once get_template_directory() . '/inc/customizer.php';
 //funcao para carregar os arquivos de estilo e javascript
 function load_scripts()
 {
