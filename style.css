@@ -124,8 +124,11 @@ a.btn:focus {
     box-shadow: none;
 }
 
+.title-mobile-custom{
+    color:#23CC88;
+}
 
-
-
-
+.btn.button-mobile-custom{
+    background-color:#23CC88;
+}
 

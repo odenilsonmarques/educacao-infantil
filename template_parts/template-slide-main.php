@@ -6,6 +6,7 @@
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo $i === 0 ? 'active' : ''; ?>" aria-label="Slide <?php echo $i + 1; ?>"></button>
                 <?php endfor; ?>
             </div>
+
             <div class="carousel-inner">
                 <?php for ($i = 1; $i <= get_theme_mod('setting_carousel_slide_count', 3); $i++) : ?>
                     <div class="image-wrapper carousel-item <?php echo $i === 1 ? 'active' : ''; ?>">
@@ -20,6 +21,7 @@
                     </div>
                 <?php endfor; ?>
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" width="32" height="32">
