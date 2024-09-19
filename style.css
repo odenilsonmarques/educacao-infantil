@@ -10,8 +10,15 @@ Tags: education, children, school, preschool, kindergarten, childcare, learning,
 */
 
 
+
+/* Importa a fonte Chakra Petch do Google Fonts */
+/* Link da Fonte */
+@import url('https://fonts.googleapis.com/css2?family=NomeDaFonte:wght@400;700&display=swap');
+
+
 body {
     background-color: #ddd;
+    font-family: 'NomeDaFonte', sans-serif;
 }
 
 .top-menu {
@@ -132,3 +139,12 @@ a.btn:focus {
     background-color:#23CC88;
 }
 
+.welcome h1{
+    color: #00394f;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.paragraph-custom{
+    max-width: 550px;
+}
