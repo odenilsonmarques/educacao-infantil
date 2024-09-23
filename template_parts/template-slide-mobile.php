@@ -1,4 +1,4 @@
-<section class="d-block d-lg-none">
+<section class="slide-mobile d-block d-lg-none">
     <div class="p-3 border rounded m-3">
         <h5 class="fw-bolder fs-1 title-mobile-custom">
             <?php echo esc_html(get_theme_mod('carousel_mobile_title', 'Título Padrão')); ?>
