@@ -8,7 +8,7 @@
                 </p>
             </div>
         </div>
-        <div class="row justify-content-center text-center mt-5">
+        <div class="row justify-content-center text-center mt-5 mb-5">
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3 shadow p-3 mb-5 bg-body rounded">
                 <div class="image-custom-item-1 mb-3">
                     <img src="<?php echo esc_url(get_theme_mod("set_welcome_image_first")); ?>" alt="imagem" class="img-fluid rounded-circle">

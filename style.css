@@ -40,7 +40,6 @@ body {
     /* Remove o margin do último item para evitar espaçamento extra */
     margin-right: 0; 
 }
-
 .main-menu li a {
     color: #00394f;
     text-decoration: none;
