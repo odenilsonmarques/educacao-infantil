@@ -11,7 +11,17 @@
         <div class="row justify-content-center text-center mt-5 mb-5">
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3 shadow p-3 mb-5 bg-body rounded">
                 <div class="image-custom-item-1 mb-3">
-                    <img src="<?php echo esc_url(get_theme_mod("set_welcome_image_first")); ?>" alt="imagem" class="img-fluid rounded-circle">
+                    <?php
+                    // Verifica se a imagem foi definida no customizer
+                    $welcome_image = get_theme_mod("set_welcome_image_first");
+                    if ($welcome_image) {
+                        // Exibe a imagem definida
+                        echo '<img src="' . esc_url($welcome_image) . '" alt="imagem" class="img-fluid rounded-circle">';
+                    } else {
+                        // Se não foi definida, exibe a imagem padrão
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="imagem padrão" class="img-fluid rounded-circle">';
+                    }
+                    ?>
                 </div>
                 <h5 class="mb-3"><?php echo esc_html(get_theme_mod('set_title_first_div', 'Título')); ?></h5>
                 <p class="text-item">
@@ -20,7 +30,17 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3 shadow p-3 mb-5 bg-body rounded">
                 <div class="image-custom-item-2 mb-3">
-                    <img src="<?php echo esc_url(get_theme_mod("set_welcome_image_second")); ?>" alt="imagem" class="img-fluid rounded-circle">
+                    <?php
+                    // Verifica se a imagem foi definida no customizer
+                    $welcome_image = get_theme_mod("set_welcome_image_second");
+                    if ($welcome_image) {
+                        // Exibe a imagem definida
+                        echo '<img src="' . esc_url($welcome_image) . '" alt="imagem" class="img-fluid rounded-circle">';
+                    } else {
+                        // Se não foi definida, exibe a imagem padrão
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="imagem padrão" class="img-fluid rounded-circle">';
+                    }
+                    ?>
                 </div>
                 <h5 class="mb-3"><?php echo esc_html(get_theme_mod('set_title_second_div', 'Título')); ?></h5>
                 <p class="text-item">
@@ -29,7 +49,17 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3 shadow p-3 mb-5 bg-body rounded ">
                 <div class="image-custom-item-3 mb-3">
-                    <img src="<?php echo esc_url(get_theme_mod("set_welcome_image_third")); ?>" alt="imagem" class="img-fluid rounded-circle">
+                    <?php
+                    // Verifica se a imagem foi definida no customizer
+                    $welcome_image = get_theme_mod("set_welcome_image_third");
+                    if ($welcome_image) {
+                        // Exibe a imagem definida
+                        echo '<img src="' . esc_url($welcome_image) . '" alt="imagem" class="img-fluid rounded-circle">';
+                    } else {
+                        // Se não foi definida, exibe a imagem padrão
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="imagem padrão" class="img-fluid rounded-circle">';
+                    }
+                    ?>
                 </div>
                 <h5 class="mb-3"><?php echo esc_html(get_theme_mod('set_title_third_div', 'Título')); ?></h5>
                 <p class="text-item">
@@ -38,7 +68,17 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3 shadow p-3 mb-5 bg-body rounded">
                 <div class="image-custom-item-4 mb-3">
-                    <img src="<?php echo esc_url(get_theme_mod("set_welcome_image_fourth")); ?>" alt="imagem" class="img-fluid rounded-circle">
+                    <?php
+                    // Verifica se a imagem foi definida no customizer
+                    $welcome_image = get_theme_mod("set_welcome_image_fourth");
+                    if ($welcome_image) {
+                        // Exibe a imagem definida
+                        echo '<img src="' . esc_url($welcome_image) . '" alt="imagem" class="img-fluid rounded-circle">';
+                    } else {
+                        // Se não foi definida, exibe a imagem padrão
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="imagem padrão" class="img-fluid rounded-circle">';
+                    }
+                    ?>
                 </div>
                 <h5 class="mb-3"><?php echo esc_html(get_theme_mod('set_title_fourth_div', 'Título')); ?></h5>
                 <p class="text-item">

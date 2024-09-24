@@ -257,7 +257,10 @@ function customize_kid_education($wp_customize)
     //Fim------------- Seção para o Slide para telas pequenas -------------------
 
 
-    //customizer para secao de boas-vindas
+
+
+
+    // Inicio------------- Seção de boas - vindas-------------------
     $wp_customize->add_section(
         'sec_welcome',
         array(
@@ -304,14 +307,12 @@ function customize_kid_education($wp_customize)
     );
 
 
-
-     //Inicio------------- Seção de boas - vindas-------------------
     // imagem
     $wp_customize->add_setting(
         'set_welcome_image_first',
         array(
-            'default'           => '', 
-            'sanitize_callback' => 'esc_url_raw', 
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
         )
     );
 
@@ -363,6 +364,9 @@ function customize_kid_education($wp_customize)
             'type'     => 'textarea',
         )
     );
+
+
+
 
     // Campos que compoem a segunda div da seção de boas - vindas
     // imagem
@@ -429,8 +433,8 @@ function customize_kid_education($wp_customize)
     $wp_customize->add_setting(
         'set_welcome_image_third',
         array(
-            'default'           => '', 
-            'sanitize_callback' => 'esc_url_raw', 
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
         )
     );
 
@@ -542,7 +546,116 @@ function customize_kid_education($wp_customize)
             'type'     => 'textarea',
         )
     );
-      //Fim------------- Seção de boas - vindas -------------------
+    //Fim------------- Seção de boas - vindas -------------------
+
+
+
+
+
+
+    // Inicio------------- Seção sobre a escola-------------------
+    $wp_customize->add_section(
+        'sec_about',
+        array(
+            'title'       => __('Configuração da seção sobre a escola', 'your-text'),
+            'description' => __('Configure o conteudo da seção sobre a escola', 'your-text'),
+            'priority'    => 30,
+        )
+    );
+
+    //título
+    $wp_customize->add_setting(
+        'set_about_title',
+        array(
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_about_title',
+        array(
+            'label'    => __('Título do seção', 'your-textdomain'),
+            'section'  => 'sec_about',
+            'type'     => 'text',
+        )
+    );
+    //descrição
+    $wp_customize->add_setting(
+        'set_about_description',
+        array(
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_textarea_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_about_description',
+        array(
+            'label'    => __('Descrição da seção', 'your-textdomain'),
+            'section'  => 'sec_about',
+            'type'     => 'textarea',
+        )
+    );
+
+     // texto botão
+     $wp_customize->add_setting(
+        "set_about_text_button",
+        array(
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_textarea_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        "set_about_text_button",
+        array(
+            'label'   => __("Texto do botao", 'your-textdomain'),
+            'section' => 'sec_about',
+            'type'    => 'text',
+        )
+    );
+
+
+    // Link
+    $wp_customize->add_setting(
+        "set_about_button_link",
+        array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+
+    $wp_customize->add_control(
+        "set_about_button_link",
+        array(
+            'label'   => __("Link do Botão", 'your-textdomain'),
+            'section' => 'sec_about',
+            'type'    => 'url',
+        )
+    );
+
+      //imagem
+      $wp_customize->add_setting(
+        'set_about_image',
+        array(
+            'default'           => '', // Defina um valor padrão, se necessário
+            'sanitize_callback' => 'esc_url_raw', // Sanitização da URL da imagem
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'set_about_image',
+            array(
+                'label'      => __('Defina uma imagem', 'your-textdomain'),
+                'section'    => 'sec_about',
+                'settings'   => 'set_about_image',
+                'description' => __('Carregue uma imagem para a seção', 'your-textdomain'),
+            )
+        )
+    );
 }
 
 add_action('customize_register', 'customize_kid_education');

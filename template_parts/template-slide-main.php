@@ -9,9 +9,19 @@
         <div class="carousel-inner">
             <?php for ($i = 1; $i <= get_theme_mod('set_carousel_slide_count', 3); $i++) : ?>
                 <div class="image-wrapper carousel-item <?php echo $i === 1 ? 'active' : ''; ?>">
-                    <img src="<?php echo esc_url(get_theme_mod("set_carousel_image_$i")); ?>" alt="Slide <?php echo $i; ?>" class="img-fluid custom-image">
+                    <?php
+                    // Verifica se a imagem do slide foi definida no Customizer
+                    $carousel_image = get_theme_mod("set_carousel_image_$i");
+                    if ($carousel_image) {
+                        // Exibe a imagem definida
+                        echo '<img src="' . esc_url($carousel_image) . '" alt="Slide ' . $i . '" class="img-fluid custom-image">';
+                    } else {
+                        // Exibe uma imagem padrão se nenhuma imagem foi definida
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="Slide padrão ' . $i . '" class="img-fluid custom-image">';
+                    }
+                    ?>
                     <div class="carousel-caption text-start w-50">
-                        <h5 class="text-white fw-bolder fs-1"><?php echo esc_html(get_theme_mod("set_carousel_title_$i")); ?></h5>
+                        <h5 class="text-white fw-bolder fs-1"><?php echo esc_html(get_theme_mod("set_carousel_title_$i",)); ?></h5>
                         <p class="text-white fs-6"><?php echo esc_html(get_theme_mod("set_carousel_description_$i")); ?></p>
                         <a href="<?php echo esc_url(get_theme_mod("set_carousel_button_link_$i")); ?>" class="btn btn-lg border-0 w-50 text-white text-decoration-none fw-bolder fs-6" tabindex="-1" role="button" aria-disabled="true">
                             <?php echo esc_html(get_theme_mod("set_carousel_text_button_$i", 'texto do botão')); ?>
