@@ -9,5 +9,10 @@
     
     <!-- templates responsavel pela section sobre a escola -->
     <?php get_template_part('template_parts/template-about'); ?>
+
+    <!-- templates responsavel pela section sobre as classes infantis -->
+     <?php get_template_part('template_parts/template-classes') ;?>
+
+
 </main>
 <?php get_footer(); ?>

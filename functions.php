@@ -32,3 +32,40 @@ function educacao_infantil_config()
     );
 }
 add_action('after_setup_theme', 'educacao_infantil_config');
+
+
+//registrando widgets
+function educacao_infantil_sidebars()
+{
+    register_sidebar(
+        array(
+            'name' => 'classe infantil um',
+            'id'   => 'classe-infantil-um',
+            'before_widget' => '<div class="class-infantil">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'classe infantil dois',
+            'id'   => 'classe-infantil-dois',
+            'before_widget' => '<div class="class-infantil">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'classe infantil tres',
+            'id'   => 'classe-infantil-tres',
+            'before_widget' => '<div class="class-infantil">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+add_action('widgets_init', 'educacao_infantil_sidebars');
