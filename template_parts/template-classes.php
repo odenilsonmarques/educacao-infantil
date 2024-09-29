@@ -42,14 +42,3 @@
     </div>
 </section>
 
-<style>
-    .widget-image-custom img {
-        width: 100%;
-        /* Define a largura das imagens como 100% para que elas preencham a largura do contêiner */
-        height: auto;
-        /* Mantém a proporção da imagem */
-        max-width: 300px;
-        /* Define uma largura máxima para as imagens */
-        border-radius: 5px;
-    }
-</style>

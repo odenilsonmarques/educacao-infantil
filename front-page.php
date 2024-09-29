@@ -5,13 +5,16 @@
     <?php get_template_part('template_parts/template-slide-mobile'); ?>
 
     <!-- templates responsavel pela section de bem - vindo -->
-    <?php get_template_part('template_parts/template-welcome'); ?> 
-    
+    <?php get_template_part('template_parts/template-welcome'); ?>
+
     <!-- templates responsavel pela section sobre a escola -->
     <?php get_template_part('template_parts/template-about'); ?>
 
     <!-- templates responsavel pela section sobre as classes infantis -->
-     <?php get_template_part('template_parts/template-classes') ;?>
+    <?php get_template_part('template_parts/template-classes'); ?>
+
+    <!-- templates responsavel pela section nosos numeros -->
+    <?php get_template_part('template_parts/template-ours-numbers'); ?>
 
 
 </main>
