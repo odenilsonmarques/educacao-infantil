@@ -21,7 +21,7 @@
                     }
                     ?>
                     <div class="carousel-caption text-start w-50">
-                        <h5 class="text-white fw-bolder fs-1"><?php echo esc_html(get_theme_mod("set_carousel_title_$i",)); ?></h5>
+                        <h1 class="text-white fw-bolder"><?php echo esc_html(get_theme_mod("set_carousel_title_$i",)); ?></h1>
                         <p class="text-white fs-6"><?php echo esc_html(get_theme_mod("set_carousel_description_$i")); ?></p>
                         <a href="<?php echo esc_url(get_theme_mod("set_carousel_button_link_$i")); ?>" class="btn btn-lg border-0 w-50 text-white text-decoration-none fw-bolder fs-6" tabindex="-1" role="button" aria-disabled="true">
                             <?php echo esc_html(get_theme_mod("set_carousel_text_button_$i", 'texto do botão')); ?>

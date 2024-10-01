@@ -68,5 +68,9 @@ function educacao_infantil_sidebars()
             'after_title'   => '</h3>',
         )
     );
+
+    //  Esse recurso permite selecionar uma imagem de destque no post criados
+    add_theme_support('post-thumbnails');
+    
 }
 add_action('widgets_init', 'educacao_infantil_sidebars');

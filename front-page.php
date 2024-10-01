@@ -13,8 +13,11 @@
     <!-- templates responsavel pela section sobre as classes infantis -->
     <?php get_template_part('template_parts/template-classes'); ?>
 
-    <!-- templates responsavel pela section nosos numeros -->
+    <!-- templates responsavel pela section nossos numeros -->
     <?php get_template_part('template_parts/template-ours-numbers'); ?>
+
+    <!-- templates responsavel pela section ultimas noticias -->
+    <?php get_template_part('template_parts/template-latest-news'); ?>
 
 
 </main>
