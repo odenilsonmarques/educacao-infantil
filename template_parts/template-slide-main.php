@@ -6,6 +6,8 @@
             <?php endfor; ?>
         </div>
 
+        
+
         <div class="carousel-inner">
             <?php for ($i = 1; $i <= get_theme_mod('set_carousel_slide_count', 3); $i++) : ?>
                 <div class="image-wrapper carousel-item <?php echo $i === 1 ? 'active' : ''; ?>">

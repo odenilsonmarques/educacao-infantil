@@ -18,6 +18,5 @@
                 <?php endfor; ?>
             </div>
         </div>
-
     </div>
 </section>
