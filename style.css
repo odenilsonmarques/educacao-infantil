@@ -255,3 +255,8 @@ a.btn-latest-custom:hover {
 footer{
     background-color: #23CC88;
 }
+
+.custom-image-size{
+    width: 70%; /* Ajuste conforme necessário */
+    height: auto; /* Para manter a proporção */
+}
