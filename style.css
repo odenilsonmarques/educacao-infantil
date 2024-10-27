@@ -249,7 +249,21 @@ a.btn-latest-custom:hover {
 
 
 
+.classes h2{
+    color:#00394f;
+}
 
+.classes p{
+    color: #555555;
+}
+
+a.btn-class-custom{
+    background-color: #23CC88;
+}
+
+a.btn-class-custom:hover{
+    background-color: #1EAE76;
+}
 
 
 footer{
@@ -260,3 +274,15 @@ footer{
     width: 70%; /* Ajuste conforme necessário */
     height: auto; /* Para manter a proporção */
 }
+
+@media(max-width: 680px){
+    .custom-image-size{
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .card-body-custom{
+        max-width: 100%;
+    }
+}
+
