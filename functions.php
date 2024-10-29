@@ -129,3 +129,65 @@ function create_turmas_cpt(){
 
 
 add_action('init', 'create_turmas_cpt');
+
+
+
+
+
+
+
+
+
+
+//função para registrar o Custom Post Type (CPT) da secão professores
+function create_teacher_cpt(){
+
+    // Array para definir os rótulos (labels) que serão exibidos no painel adm
+    $labels = array(
+        'name' => _x('Professores', 'Post Type General Name', 'textdomain'),
+        'singular_name' => _x('Professor', 'Post Type Singular Name', 'textdomain'),
+        'menu_name' => __('Professores', 'textdomain'),
+        'name_admin_bar' => __('Professor', 'textdomain'),
+        'archives' => __('Arquivo de Professores', 'textdomain'),
+        'attributes' => __('Atributos de Professores', 'textdomain'),
+        'parent_item_colon' => __('Professore Parente:', 'textdomain'),
+        'all_items' => __('Todos os Professores', 'textdomain'),
+        'add_new_item' => __('Adicionar Novo Professor', 'textdomain'),
+        'add_new' => __('Adicionar Novo', 'textdomain'),
+        'new_item' => __('Novo Professor', 'textdomain'),
+        'edit_item' => __('Editar Professor', 'textdomain'),
+        'update_item' => __('Atualizar Professor', 'textdomain'),
+        'view_item' => __('Ver Professor', 'textdomain'),
+        'view_items' => __('Ver Professores', 'textdomain'),
+        'search_items' => __('Procurar Professores', 'textdomain'),
+        'not_found' => __('Não Encontrado', 'textdomain'),
+        'not_found_in_trash' => __('Não Encontrado no Lixo', 'textdomain'),
+    );
+
+    // Este array define as configurações e o comportamento do Custom Post Type
+    $args = array(
+        'label' =>__('Professor', 'textdomain'),
+        'description' =>__('Custom POst Type para tipos de professores', 'textdomain'),
+        'labels' => $labels,
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-welcome-learn-more',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+
+    );
+
+    register_post_type('professores', $args);
+}
+
+add_action('init', 'create_teacher_cpt');
+
