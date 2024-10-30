@@ -26,10 +26,26 @@
                         <div class="card mb-3 border-0 ">
                             <div class="row g-0">
                                 <div class="col-md-6 text-lg-end text-center"> <!-- Centraliza a imagem em dispositivos móveis -->
-                                    <?php if (has_post_thumbnail()) : ?>
-                                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size me-lg-3 mb-3 mb-md-0">
-                                    <?php endif; ?>
+
+                                    <?php
+                                    if (has_post_thumbnail()) :
+                                        $thumbnail_url_2 = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                                    else :
+                                        $thumbnail_url_2= get_template_directory_uri() . '/assets/img/placeholder.png';
+                                    endif;
+                                    ?>
+
+
+                                    <img src="<?php echo $thumbnail_url_2; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size me-lg-3 mb-3 mb-md-0">
                                 </div>
+
+
+                            
+
+
+
+
+
                                 <div class="col-lg-6 col-md-6 col-sm-12 align-self-center text-center text-md-start"> <!-- Centraliza o conteúdo em dispositivos móveis -->
                                     <div class="card-body ms-3" style="max-width: 400px;">
                                         <h2 class="fs-3"><?php the_title(); ?></h2>
