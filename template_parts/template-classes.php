@@ -29,27 +29,18 @@
 
                                     <?php
                                     if (has_post_thumbnail()) :
-                                        $thumbnail_url_2 = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
                                     else :
-                                        $thumbnail_url_2= get_template_directory_uri() . '/assets/img/placeholder.png';
+                                        $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
                                     endif;
                                     ?>
-
-
-                                    <img src="<?php echo $thumbnail_url_2; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size me-lg-3 mb-3 mb-md-0">
+                                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size me-lg-3 mb-3 mb-md-0">
                                 </div>
-
-
-                            
-
-
-
-
 
                                 <div class="col-lg-6 col-md-6 col-sm-12 align-self-center text-center text-md-start"> <!-- Centraliza o conteúdo em dispositivos móveis -->
                                     <div class="card-body ms-3" style="max-width: 400px;">
-                                        <h2 class="fs-3"><?php the_title(); ?></h2>
-                                        <p><?php the_excerpt(); ?></p>
+                                        <h2 class="fs-3"><?php echo get_the_title() ? get_the_title() : 'Titulo Padrão'; ?></h2>
+                                        <p><?php echo get_the_excerpt() ? get_the_excerpt() : 'Parágrafo pradrão'; ?></p>
                                         <a href="<?php the_permalink(); ?>" class="btn btn-class-custom text-white">Agende sua visita!</a>
                                     </div>
                                 </div>
@@ -62,15 +53,23 @@
                             <div class="row g-0">
                                 <div class="col-md-5 offset-md-1 align-self-center text-center text-md-start order-2 order-md-1">
                                     <div class="card-body ms-md-5" style="max-width: 400px;">
-                                        <h2 class="fs-3"><?php the_title(); ?></h2>
-                                        <p><?php the_excerpt(); ?></p>
+                                        <h2 class="fs-3"><?php echo get_the_title() ? get_the_title() : 'Titulo Padrão'; ?></h2>
+                                        <p><?php echo get_the_excerpt() ? get_the_excerpt() : 'Parágrafo pradrão'; ?></p>
                                         <a href="<?php the_permalink(); ?>" class="btn btn-class-custom text-white">Agende sua visita!</a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 text-center text-md-start order-1 order-md-2">
-                                    <?php if (has_post_thumbnail()) : ?>
-                                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size mx-auto d-block ms-lg-4">
-                                    <?php endif; ?>
+
+                                    <?php
+                                    if (has_post_thumbnail()) :
+                                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                                    else :
+                                        $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
+                                    endif;
+                                    ?>
+                                    
+                                    <img src="<?php  echo $thumbnail_url;('large'); ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size mx-auto d-block ms-lg-4">
+                                   
                                 </div>
                             </div>
                         </div>

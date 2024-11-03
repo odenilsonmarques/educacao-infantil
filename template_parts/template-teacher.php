@@ -36,7 +36,6 @@
                                 </h5>
                                 <p class="card-text">
                                     <?php echo wp_trim_words(get_the_content(), 15, ' [...]') ? get_the_content() : 'Conteúdo padrão para o professor.'; ?>
-                                    
                                 </p>
                             </div>
                         </div>

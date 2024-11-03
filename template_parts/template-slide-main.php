@@ -19,7 +19,7 @@
                         echo '<img src="' . esc_url($carousel_image) . '" alt="Slide ' . $i . '" class="img-fluid custom-image">';
                     } else {
                         // Exibe uma imagem padrão se nenhuma imagem foi definida
-                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="Slide padrão ' . $i . '" class="img-fluid custom-image">';
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/placeholder-attachment.png" alt="Slide padrão ' . $i . '" class="img-fluid custom-image">';
                     }
                     ?>
                     <div class="carousel-caption text-start w-50">

@@ -19,7 +19,7 @@
                         echo '<img src="' . esc_url($welcome_image) . '" alt="imagem" class="img-fluid rounded-circle">';
                     } else {
                         // Se não foi definida, exibe a imagem padrão
-                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="imagem padrão" class="img-fluid rounded-circle">';
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/placeholder.png" alt="imagem padrão" class="img-fluid rounded-circle">';
                     }
                     ?>
                 </div>
@@ -38,7 +38,7 @@
                         echo '<img src="' . esc_url($welcome_image) . '" alt="imagem" class="img-fluid rounded-circle">';
                     } else {
                         // Se não foi definida, exibe a imagem padrão
-                        echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="imagem padrão" class="img-fluid rounded-circle">';
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/placeholder-attachment.png" alt="imagem padrão" class="img-fluid rounded-circle">';
                     }
                     ?>
                 </div>

@@ -10,15 +10,15 @@
         </div>
         <div class="row mt-5 mb-5">
             <?php
-            // consulta personalizada para pegar os tres ultimos posts
+            // consulta personalizada para pegar os três últimos posts
             $args = array(
-                'post_type'         =>  'post',
-                'posts_per_page'    =>  3,
+                'post_type'         => 'post',
+                'posts_per_page'    => 3,
                 'orderby'           => 'date',
                 'order'             => 'DESC'
             );
 
-            //usando o objeto wp_query para executar a consulta
+            // usando o objeto WP_Query para executar a consulta
             $posts = new WP_Query($args);
 
             if ($posts->have_posts()):
@@ -26,10 +26,18 @@
             ?>
 
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-3 d-flex justify-content-center text-center">
-                        <div class="card border" style="width: 19rem;">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" class="card-img-top" alt="<?php the_title(); ?>" height="200">
-                            <?php endif; ?>
+                        <div class="card border" style="width:18rem">
+
+                            <?php
+                            if (has_post_thumbnail()) :
+                                $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                            else :
+                                $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
+                            endif;
+                            ?>
+
+                            <img src="<?php echo esc_url($thumbnail_url); ?>" class="card-img-top" alt="<?php the_title_attribute(); ?>" height="200">
+
                             <div class="card-body">
                                 <p class="author-date-custom">
                                     Por <?php the_author(); ?> -
@@ -46,8 +54,8 @@
                                 <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-latest-custom border-0">Leia mais</a>
                             </div>
                         </div>
-
                     </div>
+
                 <?php endwhile; ?>
             <?php else: ?>
                 <p>Nada para mostrar</p>
@@ -55,6 +63,6 @@
             <?php wp_reset_postdata(); // Reseta os dados da consulta personalizada 
             ?>
         </div>
+
     </div>
 </section>
-

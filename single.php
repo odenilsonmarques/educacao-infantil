@@ -6,9 +6,15 @@
             <?php while (have_posts()) : the_post() ?>
                 <div class="col-lg-8 mb-5 mt-5 d-flex flex-column align-items-start">
                     <div class="mb-2">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" class="img-fluid  rounded" alt="<?php the_title(); ?>" style="height: 400px; object-fit: cover;">
-                        <?php endif; ?>
+                        <?php
+                        if (has_post_thumbnail()) :
+                            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                        else :
+                            $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
+                        endif;
+                        ?>
+                        <img src="<?php echo $thumbnail_url;
+                                    ('large');  ?>" class="img-fluid  rounded" alt="<?php the_title(); ?>" style="height: 400px; object-fit: cover;">
                     </div>
 
                     <p class="d-flex align-items-center content-sigle-post-intens-custom mt-2">
@@ -35,7 +41,7 @@
                     </p>
                 </div>
             <?php endwhile ?>
-            <div class="col-12 col-md-4 title-articles mt-4 rounded ">
+            <div class="col-4 title-articles mt-4 rounded">
                 <h4 class="mb-3 p-2 mt-2">Outras notícias</h4>
                 <?php
                 $args = array(
@@ -52,15 +58,19 @@
                 ?>
                         <div class="card border-0 p-2">
                             <div class="row">
-
-                                <div class="col-3 col-md-3 d-flex align-items-start">
+                                <div class="col-4 col-md-4 d-flex align-items-start">
                                     <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail(array(100, 100), array('class' => 'rounded')); ?>
+                                        <?php
+                                        if (has_post_thumbnail()) :
+                                            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                                        else :
+                                            $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
+                                        endif;
+                                        ?>
+                                        <img src="<?php echo $thumbnail_url; ?>" class="custom-img-list-page-single" alt="<?php the_title(); ?>">
                                     </a>
-
-                                    
                                 </div>
-                                <div class="col-9 col-md-9">
+                                <div class="col-8 col-md-8">
                                     <div class="card-body">
                                         <p class="fw-bolder card-title fs-6"><?php the_title(); ?></p>
                                         <small class="text-muted"><?php echo get_the_date(); ?></small>

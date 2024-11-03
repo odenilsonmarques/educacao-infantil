@@ -21,7 +21,8 @@
                     echo '<img src="' . esc_url($about_image) . '" alt="Slide ' . $i . '" class="img-fluid about-image-custom">';
                 } else {
                     // Exibe uma imagem padrão se nenhuma imagem foi definida
-                    echo '<img src="' . get_template_directory_uri() . '/assets/img/default.png" alt="Slide padrão ' . $i . '" class="img-fluid custom-image">';
+
+                    echo '<img src="' . get_template_directory_uri() . '/assets/img/placeholder-attachment.png" alt="Slide padrão ' . $i . '" class="img-fluid custom-image border">';
                 }
                 ?>
             </div>
