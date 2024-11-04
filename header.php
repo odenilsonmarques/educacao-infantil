@@ -71,8 +71,8 @@
         </div>
     </div>
 
-    <header>
-        <nav class="main-menu navbar navbar-expand-lg navbar-light py-4 mt-5">
+    <header >
+        <nav class="main-menu navbar navbar-expand-lg navbar-light py-3 mt-5 fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <!-- poderia ser um logo customizada. Porem o wp aplica algumas formatações que deixam a logo no centro. Pra esse projeto não me cai muito bem  -->

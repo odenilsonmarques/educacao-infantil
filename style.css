@@ -290,3 +290,28 @@ footer{
     width: 130%;
     height: auto;
 }
+
+.custom-img-list-page-blog{
+    width: 100%;
+    height: auto;
+}
+
+.page-numbers{
+    color: #00394f;
+    font-size: 20px;
+}
+
+.slide{
+    margin-top: 120px;
+}
+
+/* Estilo normal do header */
+.main-menu {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo do header quando a página rolar */
+.main-menu.scrolled {
+    background-color: #23CC88; /* ou qualquer cor de sua preferência */
+}

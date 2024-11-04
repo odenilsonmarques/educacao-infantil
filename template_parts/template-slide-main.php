@@ -1,4 +1,4 @@
-<section class="slide-mobile-main d-none d-lg-block">
+<section class="slide-mobile-main d-none d-lg-block slide">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <?php for ($i = 0; $i < get_theme_mod('set_carousel_slide_count', 3); $i++) : ?>

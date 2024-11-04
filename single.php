@@ -64,7 +64,7 @@
                                         if (has_post_thumbnail()) :
                                             $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                                         else :
-                                            $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
+                                            $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder-attachment.png';
                                         endif;
                                         ?>
                                         <img src="<?php echo $thumbnail_url; ?>" class="custom-img-list-page-single" alt="<?php the_title(); ?>">

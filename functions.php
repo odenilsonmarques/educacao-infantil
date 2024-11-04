@@ -7,6 +7,7 @@ function load_scripts()
     wp_enqueue_style('bootstrap-min', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
     wp_enqueue_script('bootstrap-min', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js');
     wp_enqueue_script('ours-numbers', get_template_directory_uri() . '/assets/js/ours-numbers.js');
+    wp_enqueue_script('scroll-page', get_template_directory_uri() . '/assets/js/scroll-page.js');
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
