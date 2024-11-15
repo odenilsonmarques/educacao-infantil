@@ -5,8 +5,7 @@
                 <h2 class="mt-5 mb-5 fs-2 fw-bolder">Nossas Turmas</h2>
             </div>
         </div>
-        <div class="row justify-content-center mb-5">
-
+        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center mb-5">
             <?php
             $args = array(
                 'post_type' => 'turmas',
@@ -16,14 +15,11 @@
             $turmas_query = new WP_Query($args);
 
             if ($turmas_query->have_posts()) :
-                $counter = 0; // contador para alternar entre esquerda e direita
                 while ($turmas_query->have_posts()) : $turmas_query->the_post(); ?>
-                    <?php if ($counter % 2 == 0) : // Para a primeira turma e as subsequentes em posição par 
-                    ?>
-                        <div class="card mb-3 border-0 ">
+                    <div class="col">
+                        <div class="card mb-3 border">
                             <div class="row g-0">
-                                <div class="col-md-6 text-lg-end text-center"> <!-- Centraliza a imagem em dispositivos móveis -->
-
+                                <div class="col-md-4">
                                     <?php
                                     if (has_post_thumbnail()) :
                                         $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
@@ -31,52 +27,58 @@
                                         $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
                                     endif;
                                     ?>
-                                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size me-lg-3 mb-3 mb-md-0">
+                                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded-start fixed-image">
                                 </div>
 
-                                <div class="col-lg-6 col-md-6 col-sm-12 align-self-center text-center text-md-start"> <!-- Centraliza o conteúdo em dispositivos móveis -->
-                                    <div class="card-body ms-3" style="max-width: 400px;">
-                                        <h2 class="fs-3"><?php echo get_the_title() ? get_the_title() : 'Titulo Padrão'; ?></h2>
-                                        <p><?php echo get_the_excerpt() ? get_the_excerpt() : 'Parágrafo pradrão'; ?></p>
-                                        <a href="<?php the_permalink(); ?>" class="btn btn-class-custom text-white">Agende sua visita!</a>
+                                <style>
+                                    .fixed-image {
+                                        width: 100%;
+                                        /* Adapta ao tamanho do contêiner */
+                                        height: 200px;
+                                        /* Altura fixa */
+                                        object-fit: cover;
+                                        /* Garante que a imagem preencha o espaço mantendo proporções */
+                                    }
+
+                                    .card {
+                                        border-radius: 8px;
+                                        /* Bordas arredondadas */
+                                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                        /* Sombra sutil */
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                        /* Animação suave */
+                                    }
+
+                                    .card:hover {
+                                        transform: translateY(-5px);
+                                        /* Efeito de elevação ao passar o mouse */
+                                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                                        /* Sombra mais forte no hover */
+                                    }
+                                </style>
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: #23CC88"><?php echo get_the_title() ? get_the_title() : 'Título Padrão'; ?></h5>
+                                        <p class="card-text">
+                                            <?php
+                                            $excerpt = get_the_excerpt() ? get_the_excerpt() : 'Texto padrão para a descrição da turma.';
+                                            echo mb_strimwidth($excerpt, 0, 200, '...'); // Limita a 100 caracteres e adiciona "..." no final.
+                                            ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                    <?php else : // Para as turmas em posição ímpar 
-                    ?>
-                        <div class="card mb-3 border-0 mt-3 mb-5">
-                            <div class="row g-0">
-                                <div class="col-md-5 offset-md-1 align-self-center text-center text-md-start order-2 order-md-1">
-                                    <div class="card-body ms-md-5" style="max-width: 400px;">
-                                        <h2 class="fs-3"><?php echo get_the_title() ? get_the_title() : 'Titulo Padrão'; ?></h2>
-                                        <p><?php echo get_the_excerpt() ? get_the_excerpt() : 'Parágrafo pradrão'; ?></p>
-                                        <a href="<?php the_permalink(); ?>" class="btn btn-class-custom text-white">Agende sua visita!</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 text-center text-md-start order-1 order-md-2">
-
-                                    <?php
-                                    if (has_post_thumbnail()) :
-                                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
-                                    else :
-                                        $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
-                                    endif;
-                                    ?>
-                                    <img src="<?php  echo $thumbnail_url;('large'); ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size mx-auto d-block ms-lg-4">
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <?php $counter++; // Incrementa o contador 
-                    ?>
-            <?php endwhile;
+                    </div>
+            <?php
+                endwhile;
                 wp_reset_postdata();
             else :
                 echo '<p>Nenhuma turma encontrada.</p>';
             endif;
             ?>
         </div>
+
     </div>
 </section>

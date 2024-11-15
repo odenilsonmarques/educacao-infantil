@@ -1,7 +1,7 @@
 <section class="latests-news">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 p-3 text-center">
+            <div class="col-lg-12 text-center">
                 <h2 class="mt-5 mb-5 fs-2 fw-bolder">Nossas últimas notícias</h2>
             </div>
         </div>

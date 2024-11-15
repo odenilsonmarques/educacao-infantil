@@ -1,7 +1,7 @@
 <section class="welcome">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 p-3 text-center">
+            <div class="col-lg-12 text-center">
                 <h2 class="mt-5 mb-3 fs-2 fw-bolder"><?php echo esc_html(get_theme_mod('set_welcome_title', 'Título padrão')); ?></h2>
                 <p class="mx-auto lh-base paragraph-custom">
                     <?php echo esc_html(get_theme_mod('set_welcome_description', 'Parágrafo padrão')); ?>

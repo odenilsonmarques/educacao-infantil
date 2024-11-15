@@ -1,12 +1,12 @@
 <section class="teacher" id="professores">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 p-3 text-center">
+            <div class="col-lg-12 text-center">
                 <h2 class="mt-5 mb-5 fs-2 fw-bolder">Nossos Professores</h2>
             </div>
         </div>
 
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center">
             <?php
             $args = array(
                 'post_type' => 'professores',
@@ -18,9 +18,8 @@
             if ($teacher_query->have_posts()) :
                 while ($teacher_query->have_posts()) : $teacher_query->the_post(); ?>
 
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center text-center">
                         <div class="card border-0">
-
                             <?php
                             if (has_post_thumbnail()) :
                                 $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
