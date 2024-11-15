@@ -2,13 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 p-3 text-center">
-                <h2 class="mt-5 mb-3 fs-2 fw-bolder">Nossas últimas notícias</h2>
-                <p class="mx-auto lh-base paragraph-custom">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ea facilis iste qui nihil iure autem tempora assumenda rerum libero, consequuntur voluptas. Aut, sequi excepturi veniam dolor impedit ad! Molestiae.
-                </p>
+                <h2 class="mt-5 mb-5 fs-2 fw-bolder">Nossas últimas notícias</h2>
             </div>
         </div>
-        <div class="row mt-5 mb-5">
+        <div class="row mb-5">
             <?php
             // consulta personalizada para pegar os três últimos posts
             $args = array(

@@ -1,12 +1,12 @@
-<section class="classes" id="professores">
+<section class="teacher" id="professores">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 p-3 text-center">
-                <h2 class="mt-5 mb-3 fs-2 fw-bolder">Nossos Professores</h2>
+                <h2 class="mt-5 mb-5 fs-2 fw-bolder">Nossos Professores</h2>
             </div>
         </div>
 
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mb-5">
             <?php
             $args = array(
                 'post_type' => 'professores',

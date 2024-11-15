@@ -1,14 +1,11 @@
 <section class="classes" id="turmas">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 p-3 text-center">
-                <h2 class="mt-5 mb-3 fs-2 fw-bolder">Nossas Turmas</h2>
-                <p class="mx-auto lh-base paragraph-custom">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque alias quis voluptas at fugiat impedit, iusto iure culpa repellat numquam quod eum aut recusandae exercitationem cumque quidem neque aliquam!
-                </p>
+            <div class="col-lg-12 text-center">
+                <h2 class="mt-5 mb-5 fs-2 fw-bolder">Nossas Turmas</h2>
             </div>
         </div>
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mb-5">
 
             <?php
             $args = array(
@@ -49,7 +46,7 @@
 
                     <?php else : // Para as turmas em posição ímpar 
                     ?>
-                        <div class="card mb-3 border-0 mt-5 mb-5">
+                        <div class="card mb-3 border-0 mt-3 mb-5">
                             <div class="row g-0">
                                 <div class="col-md-5 offset-md-1 align-self-center text-center text-md-start order-2 order-md-1">
                                     <div class="card-body ms-md-5" style="max-width: 400px;">
@@ -67,9 +64,7 @@
                                         $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
                                     endif;
                                     ?>
-                                    
                                     <img src="<?php  echo $thumbnail_url;('large'); ?>" alt="<?php the_title(); ?>" class="img-fluid rounded custom-image-size mx-auto d-block ms-lg-4">
-                                   
                                 </div>
                             </div>
                         </div>
@@ -82,7 +77,6 @@
                 echo '<p>Nenhuma turma encontrada.</p>';
             endif;
             ?>
-
         </div>
     </div>
 </section>

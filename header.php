@@ -4,17 +4,7 @@
 <head>
     <meta <?php bloginfo('charset'); ?>>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php
-        if (is_home()) {
-            bloginfo('name');
-        } else {
-            bloginfo('name');
-            echo ' | ';
-            the_title();
-        }
-        ?>
-    </title>
+   <!-- a tag title foi removida, pois foi utilizado a funcao add_theme_support no function, esse recurso exibe o titulo das página busacadas -->
     <?php wp_head(); ?>
 </head>
 
@@ -74,7 +64,7 @@
     <header >
         <nav class="main-menu navbar navbar-expand-lg navbar-light py-3 mt-5 fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="<?php echo home_url(); ?>">
                     <!-- poderia ser um logo customizada. Porem o wp aplica algumas formatações que deixam a logo no centro. Pra esse projeto não me cai muito bem  -->
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="" width="" height="" class="d-inline-block align-text-top">
                 </a>

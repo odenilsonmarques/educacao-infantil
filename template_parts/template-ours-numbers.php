@@ -1,7 +1,7 @@
 <section class="ours-numbers">
     <div class="container">
         <!-- use aqui uma mt-5 porque nao tenho um h1 nesse a section -->
-        <div class="row justify-content-center text-center mt-5">
+        <div class="row justify-content-center text-center">
             <div class="col-lg-4 col-md-6 col-sm-12 mb-5 mt-5  d-flex flex-column align-items-center">
                 <div class="mt-5 mb-2">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/alunos2.png" alt="">

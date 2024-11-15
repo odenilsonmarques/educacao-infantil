@@ -32,6 +32,9 @@ function educacao_infantil_config()
             'footer_menu' => 'Menu rodape'
         )
     );
+
+    // Essa tag recupera o titulo de todas as pafinas
+    add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'educacao_infantil_config');
 
