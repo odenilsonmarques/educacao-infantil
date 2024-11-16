@@ -52,12 +52,12 @@ body {
 
 /* Escolha a cor que deseja para o menu após o scroll */
 .main-menu.scrolled li a {
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 /* Escolha a cor que deseja para o menu após o scroll */
 .main-menu.scrolled li a:hover {
-    color: #00394f; 
+    color: #00394f;
 }
 
 .nav-item .btn-custom {
@@ -248,70 +248,73 @@ a.btn-latest-custom:hover {
 }
 
 
-.content-sigle-post-intens-custom{
-    color:#00394f ;
+.content-sigle-post-intens-custom {
+    color: #00394f;
 }
 
 
-.content-single-post-custom{
+.content-single-post-custom {
     color: #555555;
 }
 
 
 
-.classes h2{
-    color:#00394f;
+.classes h2 {
+    color: #00394f;
 }
 
-.classes p{
+.classes p {
     color: #555555;
 }
 
-a.btn-class-custom{
+a.btn-class-custom {
     background-color: #23CC88;
 }
 
-a.btn-class-custom:hover{
+a.btn-class-custom:hover {
     background-color: #1EAE76;
 }
 
 
-footer{
+footer {
     background-color: #23CC88;
 }
 
-.custom-image-size{
-    width: 70%; /* Ajuste conforme necessário */
-    height: auto; /* Para manter a proporção */
+.custom-image-size {
+    width: 70%;
+    /* Ajuste conforme necessário */
+    height: auto;
+    /* Para manter a proporção */
 }
 
-@media(max-width: 680px){
-    .custom-image-size{
+@media(max-width: 680px) {
+    .custom-image-size {
         width: 100%;
         margin-bottom: 20px;
         text-align: center;
     }
-    .card-body-custom{
+
+    .card-body-custom {
         max-width: 100%;
     }
 }
 
-.custom-img-list-page-single{
+.custom-img-list-page-single {
     width: 130%;
     height: auto;
 }
 
-.custom-img-list-page-blog{
+.custom-img-list-page-blog {
     width: 100%;
     height: auto;
 }
 
-.page-numbers{
+.page-numbers {
     color: #00394f;
     font-size: 20px;
 }
 
-.slide{
+.slide {
     margin-top: 130px;
 }
 
@@ -323,28 +326,66 @@ footer{
 
 /* Estilo do header quando a página rolar */
 .main-menu.scrolled {
-    background-color: #23CC88; /* ou qualquer cor de sua preferência */
+    background-color: #23CC88;
+    /* ou qualquer cor de sua preferência */
 }
 
-.sigle-post{
+.sigle-post {
     margin-top: 120px;
 }
 
-.post{
+.post {
     margin-top: 120px;
 }
 
-.classes, .teacher{
+.classes,
+.teacher {
     position: relative;
-    padding-top: 100px; /* Ajuste esse valor conforme a altura do seu header */
-    margin-top: -100px; /* Mesma altura, para compensar o deslocamento */
+    padding-top: 100px;
+    /* Ajuste esse valor conforme a altura do seu header */
+    margin-top: -100px;
+    /* Mesma altura, para compensar o deslocamento */
 }
 
-.page-post{
+.page-post {
     margin-top: 120px;
 }
 
-.page-post img{
-   height: auto;
-   width: 200px;
-} 
+.page-post img {
+    height: auto;
+    width: 200px;
+}
+
+img.fixed-image {
+    width: 100%;
+    /* Adapta ao tamanho do contêiner */
+    height: 200px;
+    /* Altura fixa */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço mantendo proporções */
+}
+
+.card {
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animação suave */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Sombra mais forte no hover */
+}
+
+.offcanvas-body li {
+    margin-top: 10px;
+}
+
+.transparent-img {
+    opacity: 0.7;
+    /* Ajuste o valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
+}

@@ -49,9 +49,3 @@
     </div>
 </section>
 
-<style>
-    .transparent-img {
-        opacity: 0.7;
-        /* Ajuste o valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
-    }
-</style>

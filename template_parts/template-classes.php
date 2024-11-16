@@ -30,33 +30,6 @@
                                     <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded-start fixed-image">
                                 </div>
 
-                                <style>
-                                    .fixed-image {
-                                        width: 100%;
-                                        /* Adapta ao tamanho do contêiner */
-                                        height: 200px;
-                                        /* Altura fixa */
-                                        object-fit: cover;
-                                        /* Garante que a imagem preencha o espaço mantendo proporções */
-                                    }
-
-                                    .card {
-                                        border-radius: 8px;
-                                        /* Bordas arredondadas */
-                                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                        /* Sombra sutil */
-                                        transition: transform 0.3s ease, box-shadow 0.3s ease;
-                                        /* Animação suave */
-                                    }
-
-                                    .card:hover {
-                                        transform: translateY(-5px);
-                                        /* Efeito de elevação ao passar o mouse */
-                                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-                                        /* Sombra mais forte no hover */
-                                    }
-                                </style>
-
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title" style="color: #23CC88"><?php echo get_the_title() ? get_the_title() : 'Título Padrão'; ?></h5>

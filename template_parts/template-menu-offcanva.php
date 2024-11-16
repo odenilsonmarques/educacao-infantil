@@ -21,8 +21,3 @@
     </div>
 </div>
 
-<style>
-    .offcanvas-body li {
-        margin-top: 10px;
-    }
-</style>
