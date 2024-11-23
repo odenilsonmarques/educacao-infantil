@@ -187,9 +187,11 @@ p.paragraph-custom {
 .image-custom-item-1 img {
     width: 100px;
     height: 100px;
-    border-radius: 50%; /* Use '50%' para garantir o círculo perfeito */
+    border-radius: 50%;
+    /* Use '50%' para garantir o círculo perfeito */
     padding: 15px;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(35, 204, 136) 0%, rgb(142, 207, 53) 100%);
     box-shadow: 0px 18px 30px 0px rgba(38, 204, 133, 0.36);
 }
@@ -201,7 +203,8 @@ p.paragraph-custom {
     height: 100px;
     border-radius: 100%;
     padding: 15px;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(255, 79, 88) 0%, rgb(255, 180, 0) 100%);
     box-shadow: 0px 18px 24px 0px rgba(255, 114, 58, 0.36);
     /* border: 1px solid red; */
@@ -212,7 +215,8 @@ p.paragraph-custom {
     height: 100px;
     border-radius: 100%;
     padding: 15px;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(1, 203, 173) 0%, rgb(71, 161, 242) 100%);
     box-shadow: 0px 18px 24px 0px rgba(1, 203, 173, 0.36);
     /* border: 1px solid red; */
@@ -223,7 +227,8 @@ p.paragraph-custom {
     height: 100px;
     border-radius: 100%;
     padding: 15px;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(232, 90, 202) 0%, rgb(252, 78, 101) 100%);
     box-shadow: 0px 18px 24px 0px rgba(233, 89, 197, 0.36);
     /* border: 1px solid red; */
@@ -257,11 +262,28 @@ p.paragraph-custom {
 } */
 
 .about {
-    background: linear-gradient(135deg, #23CC88 0%, #a1e9bf 100%);
+    /* background: linear-gradient(135deg, #23CC88 0%, #a1e9bf 100%); */
+    background: linear-gradient(145deg, #a4d4a4, #79c9c9);
+    /* Gradiente de verde */
+    color: #ffffff;
+    /* Ajusta a cor do texto */
+    /* padding: 50px 20px; */
+    /* border-radius: 10px; */
+}
+
+.about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 .about-image-custom {
-    max-height: 550px;
+    /* max-height: 550px; */
     /* Mantém a largura 100% responsiva */
     width: 100%;
     /* Garante que a imagem não seja distorcida */
@@ -269,14 +291,27 @@ p.paragraph-custom {
     margin-top: 30px;
 }
 
+
+
+
 a.btn-about-custom {
-    background-color: #fff;
-    color: #23CC88;
+    /* background-color: #fff;
+    color: #23CC88; */
+    background-color: #38c172;
+    /* Verde vibrante */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 a.btn-about-custom:hover {
-    background-color: #23CC88;
-    color: #fff;
+    background-color: #2fa659;
+    /* Tom mais escuro no hover */
+    transform: scale(1.05);
+    /* Pequeno zoom */
 }
 
 
@@ -291,14 +326,30 @@ a.btn-about-custom:hover {
 
 
 .ours-numbers {
-    /* background: linear-gradient(135deg, #23CC88 0%, #a1e9bf 100%); */
-    background-image: linear-gradient(135deg, rgb(255, 79, 88) 0%, rgb(255, 180, 0) 100%);
+    background: linear-gradient(145deg, #a4d4a4, #79c9c9);
+}
+
+.ours-numbers p {
+    font-family: 'Poppins', sans-serif;
 }
 
 
-/* .latests-news{
-    background-image: -webkit-linear-gradient(0deg, rgb(232, 90, 202) 0%, rgb(252, 78, 101) 100%);
-} */
+.ours-numbers img {
+    background: rgba(255, 255, 255, 0.2);
+    /* Fundo circular semitransparente */
+    border-radius: 50%;
+    /* Torna o fundo circular */
+    padding: 20px;
+    /* Espaçamento interno entre a imagem e a borda */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Borda semitransparente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil para destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Efeito de animação */
+}
+
+
 
 
 .author-date-custom {
@@ -345,6 +396,45 @@ a.btn-latest-custom:hover {
     color: #555555;
 }
 
+.classes h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.classes .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.classes .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.classes h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #23cc88;
+    margin-bottom: 10px;
+}
+
+.classes p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+img.custom-img-classes {
+    opacity: 0.9;
+    width: 100%;
+    /* Adapta ao tamanho do contêiner */
+    height: 200px;
+    /* Altura fixa */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço mantendo proporções */
+}
 
 
 .classes h2 {
@@ -365,7 +455,7 @@ a.btn-class-custom:hover {
 
 
 footer {
-    background-color: #23CC88;
+    background-color: #28a745;
 }
 
 .custom-image-size {
@@ -426,7 +516,7 @@ footer {
     margin-top: 120px;
 }
 
-.classes,
+
 .teacher {
     position: relative;
     padding-top: 100px;
@@ -444,31 +534,9 @@ footer {
     width: 200px;
 }
 
-img.custom-img-classes {
-    opacity: 0.9;
-    width: 100%;
-    /* Adapta ao tamanho do contêiner */
-    height: 200px;
-    /* Altura fixa */
-    object-fit: cover;
-    /* Garante que a imagem preencha o espaço mantendo proporções */
-}
 
-.card {
-    border-radius: 8px;
-    /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animação suave */
-}
 
-.card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    /* Sombra mais forte no hover */
-}
+
 
 .offcanvas-body li {
     margin-top: 10px;
