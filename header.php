@@ -85,7 +85,7 @@
                         ?>
                     </ul>
                     <li class="nav-item list-unstyled">
-                        <a href="#" class="btn btn-custom fw-bold border-0 me-4">Entrar em Contato</a>
+                        <a href="#" class="btn btn-custom fw-bold border-0 me-4 text-white">Entrar em Contato</a>
                     </li>
                 </div>
             </div>

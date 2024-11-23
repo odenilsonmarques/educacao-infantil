@@ -18,10 +18,16 @@ Tags: education, children, school, preschool, kindergarten, childcare, learning,
 
 body {
     background-color: #ddd;
+    /* Substitui a fonte padrão que vem definida no boostrap. Lembrando que primeiro é definida a font-family pra todo site, depois se quisermo alterar em algum lugar especifico usar o font-style*/
+    /* nesse caso definimos a font poppins como principal, se nao for encontrada busca pela arial e assim sucessivamente*/
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
+
+
+
 .top-menu {
-    background-color: #23CC88;
+    background-color: #28a745;
 }
 
 .main-menu ul {
@@ -42,32 +48,53 @@ body {
 }
 
 .main-menu li a {
-    color: #00394f;
+    color: #333333;
     text-decoration: none;
 }
 
 .main-menu li a:hover {
-    color: #23CC88;
+    color: #28a745;
 }
 
 /* Escolha a cor que deseja para o menu após o scroll */
 .main-menu.scrolled li a {
-    color: #ffffff;
+    color: #28a745;
+
 }
 
 /* Escolha a cor que deseja para o menu após o scroll */
 .main-menu.scrolled li a:hover {
-    color: #00394f;
+    color: #333333;
+
 }
 
 .nav-item .btn-custom {
-    background: linear-gradient(45deg, #23CC88, #1EAE76);
+    background: linear-gradient(45deg, #28a745, #1E7E34);
+    /* Tons baseados no verde do topo */
     color: #fff;
+    border: none;
+    /* Remove borda padrão */
+    border-radius: 25px;
+    /* Deixa o botão mais amigável */
+    padding: 8px 20px;
+    /* Adiciona espaço interno */
+    font-weight: 600;
+    /* Deixa o texto em negrito */
+    transition: color 0.3s, background 0.3s;
+    /* Adiciona uma transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma leve sombra */
 }
 
-.nav-item a.btn-custom:hover {
-    color: #00394f;
+.nav-item .btn-custom:hover {
+    background: linear-gradient(45deg, #1E7E34, #145522);
+    /* Inverte o gradiente para o hover */
+    color: #e8ffe8;
+    /* Um branco suave no hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* Aumenta a sombra no hover */
 }
+
 
 /* estilo para o carroussel */
 .image-wrapper::before {
@@ -77,8 +104,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+
 }
+
+
 
 .custom-image {
     max-height: 500px;
@@ -95,13 +126,13 @@ body {
 }
 
 .carousel-caption a {
-    background-color: #1EAE76;
+    background-color: #007bff;
     border-radius: 5px;
     display: inline-block;
 }
 
 .carousel-caption a:hover {
-    background-color: #23CC88;
+    background-color: #28a745;
 }
 
 a.btn:focus {
@@ -109,6 +140,19 @@ a.btn:focus {
     /* Mude a cor para o que quiser */
     box-shadow: none;
 }
+
+.carousel-caption h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+
 
 .title-mobile-custom {
     color: #23CC88;
@@ -123,28 +167,44 @@ h2 {
     letter-spacing: 2px;
 }
 
-.paragraph-custom {
+
+.welcome h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p.paragraph-custom {
     max-width: 550px;
     color: #00394f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
+
+
 
 /* aplicando um estilo pesronalizado para cada imagem da section welcome.*/
 .image-custom-item-1 img {
     width: 100px;
     height: 100px;
-    border-radius: 100%;
+    border-radius: 50%; /* Use '50%' para garantir o círculo perfeito */
     padding: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(35, 204, 136) 0%, rgb(142, 207, 53) 100%);
     box-shadow: 0px 18px 30px 0px rgba(38, 204, 133, 0.36);
 }
+
+
 
 .image-custom-item-2 img {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     padding: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(255, 79, 88) 0%, rgb(255, 180, 0) 100%);
     box-shadow: 0px 18px 24px 0px rgba(255, 114, 58, 0.36);
+    /* border: 1px solid red; */
 }
 
 .image-custom-item-3 img {
@@ -152,8 +212,10 @@ h2 {
     height: 100px;
     border-radius: 100%;
     padding: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(1, 203, 173) 0%, rgb(71, 161, 242) 100%);
     box-shadow: 0px 18px 24px 0px rgba(1, 203, 173, 0.36);
+    /* border: 1px solid red; */
 }
 
 .image-custom-item-4 img {
@@ -161,13 +223,38 @@ h2 {
     height: 100px;
     border-radius: 100%;
     padding: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     background-image: linear-gradient(145deg, rgb(232, 90, 202) 0%, rgb(252, 78, 101) 100%);
     box-shadow: 0px 18px 24px 0px rgba(233, 89, 197, 0.36);
+    /* border: 1px solid red; */
 }
 
-p.text-item {
-    color: #555555;
+.welcome .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2C3E50;
+    /* Cor para o título */
 }
+
+.welcome .card-text {
+    font-size: 1rem;
+    color: #7F8C8D;
+    /* Cor para o texto */
+    margin-top: 10px;
+}
+
+.welcome .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* p.text-item {
+    color: red;
+} */
 
 .about {
     background: linear-gradient(135deg, #23CC88 0%, #a1e9bf 100%);
@@ -240,11 +327,12 @@ a.btn-about-custom:hover {
 
 
 a.btn-latest-custom {
-    background-color: #00394f;
+    background-color: #23CC88;
 }
 
 a.btn-latest-custom:hover {
-    background-color: #23CC88;
+
+    background-color: #00394f;
 }
 
 
@@ -326,7 +414,7 @@ footer {
 
 /* Estilo do header quando a página rolar */
 .main-menu.scrolled {
-    background-color: #23CC88;
+    background-color: #fff;
     /* ou qualquer cor de sua preferência */
 }
 
@@ -356,7 +444,8 @@ footer {
     width: 200px;
 }
 
-img.fixed-image {
+img.custom-img-classes {
+    opacity: 0.9;
     width: 100%;
     /* Adapta ao tamanho do contêiner */
     height: 200px;
@@ -385,7 +474,15 @@ img.fixed-image {
     margin-top: 10px;
 }
 
-.transparent-img {
-    opacity: 0.7;
+img.custom-img-teacher {
+    opacity: 0.9;
     /* Ajuste o valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço mantendo proporções */
+}
+
+.card-title {
+    color: #23CC88;
 }

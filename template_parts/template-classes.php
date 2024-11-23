@@ -27,12 +27,12 @@
                                         $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
                                     endif;
                                     ?>
-                                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded-start fixed-image">
+                                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" class="img-fluid rounded-start custom-img-classes">
                                 </div>
 
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #23CC88"><?php echo get_the_title() ? get_the_title() : 'Título Padrão'; ?></h5>
+                                        <h5 class="card-title"><?php echo get_the_title() ? get_the_title() : 'Título Padrão'; ?></h5>
                                         <p class="card-text">
                                             <?php
                                             $excerpt = get_the_excerpt() ? get_the_excerpt() : 'Texto padrão para a descrição da turma.';

@@ -656,67 +656,6 @@ function customize_kid_education($wp_customize)
             )
         )
     );
-
-
-
-
-
-
-
-
-
-
-     //Inicio------------- Seção para perguntas e respostas -------------------
-     $wp_customize->add_section(
-        'sec_pergunta',
-        array(
-            'title'       => __('Configuração da secao pergunta', 'your-text'),
-            'description' => __('Configure o conteudo da pergunta', 'your-text'),
-            'priority'    => 30,
-        )
-    );
-
-    $wp_customize->add_setting(
-        'set_pergunta_count',
-        array(
-            'default'           => 3,
-            'sanitize_callback' => 'absint',
-        )
-    );
-
-    $wp_customize->add_control(
-        'set_pergunta_count',
-        array(
-            'label'       => __('Selecione o número de perguntas', 'your-textdomain'),
-            'section'     => 'sec_pergunta',
-            'type'        => 'number',
-            'input_attrs' => array('min' => 1, 'max' => 10),
-        )
-    );
-
-
-     // esse laço exibe os conteúdos que compoe a section pergunta
-     for ($i = 1; $i <= get_theme_mod('set_pergunta_count', 3); $i++) {
-
-        // Título do slide
-        $wp_customize->add_setting(
-            "set_pergunta_title_$i",
-            array(
-                'default'           => '',
-                'sanitize_callback' => 'sanitize_text_field',
-            )
-        );
-
-        $wp_customize->add_control(
-            "set_pergunta_title_$i",
-            array(
-                'label'   => __("Título da pergunta $i", 'your-textdomain'),
-                'section' => 'sec_pergunta',
-                'type'    => 'text',
-            )
-        );
-    }
-    //Fim------------- Seção para o Slide -------------------
 }
 
 add_action('customize_register', 'customize_kid_education');
