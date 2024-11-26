@@ -167,6 +167,9 @@ h2 {
     letter-spacing: 2px;
 }
 
+.welcome{
+    padding: 50px 0;
+}
 
 .welcome h2 {
     font-family: 'Poppins', sans-serif;
@@ -269,6 +272,7 @@ p.paragraph-custom {
     /* Ajusta a cor do texto */
     /* padding: 50px 20px; */
     /* border-radius: 10px; */
+    /* padding: 10px 0; */
 }
 
 .about h2 {
@@ -396,6 +400,10 @@ a.btn-latest-custom:hover {
     color: #555555;
 }
 
+.classes{
+    padding: 50px 0;
+}
+
 .classes h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
@@ -518,11 +526,33 @@ footer {
 
 
 .teacher {
-    position: relative;
-    padding-top: 100px;
-    /* Ajuste esse valor conforme a altura do seu header */
-    margin-top: -100px;
-    /* Mesma altura, para compensar o deslocamento */
+    /* tentar aplicar esse padding: nas outras section */
+    padding: 50px 0;
+}
+.teacher .card {
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.teacher img{
+    opacity: 0.9;
+    /* Ajuste o valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço mantendo proporções */
+}
+
+.teacher .card-title {
+    color: #23CC88;
 }
 
 .page-post {
@@ -542,15 +572,5 @@ footer {
     margin-top: 10px;
 }
 
-img.custom-img-teacher {
-    opacity: 0.9;
-    /* Ajuste o valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    /* Garante que a imagem preencha o espaço mantendo proporções */
-}
 
-.card-title {
-    color: #23CC88;
-}
+

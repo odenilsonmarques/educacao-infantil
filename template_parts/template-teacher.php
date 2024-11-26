@@ -24,14 +24,14 @@
                             if (has_post_thumbnail()) :
                                 $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
                             else :
-                                $thumbnail_url = get_template_directory_uri().'/assets/img/placeholder.png';
+                                $thumbnail_url = get_template_directory_uri() . '/assets/img/placeholder.png';
                             endif;
                             ?>
-                            <img src="<?php echo $thumbnail_url; ?>" class=" img-fluid rounded custom-img-teacher" alt="<?php the_title(); ?>">
+                            <img src="<?php echo $thumbnail_url; ?>" class=" img-fluid rounded" alt="<?php the_title(); ?>">
 
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <?php echo get_the_title() ? get_the_title() : 'Titulo Padrao'; ?> 
+                                    <?php echo get_the_title() ? get_the_title() : 'Titulo Padrao'; ?>
                                 </h5>
                                 <p class="card-text">
                                     <?php echo wp_trim_words(get_the_content(), 15, ' [...]') ? get_the_content() : 'Conteúdo padrão para o professor.'; ?>
@@ -48,4 +48,3 @@
         </div>
     </div>
 </section>
-
