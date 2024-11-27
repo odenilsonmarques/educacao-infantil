@@ -167,7 +167,7 @@ h2 {
     letter-spacing: 2px;
 }
 
-.welcome{
+.welcome {
     padding: 50px 0;
 }
 
@@ -356,17 +356,39 @@ a.btn-about-custom:hover {
 
 
 
-.author-date-custom {
-    font-size: 15px;
+.latests-news .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* padding: 20px; */
 }
 
-.latests-news .card-text {
-    color: #555555;
+/* .latests-news .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+.latests-news img {
+    border-radius: 10px 10px 0 0;
+}
+
+.latests-news .btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+
 }
 
 .latests-news .card-title {
-    color: #00394f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
+
+.latests-news .author-date-custom {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
 
 
 /* Aplica padding maior apenas nos parágrafos dentro do widget com a classe widget-image-custom */
@@ -400,7 +422,7 @@ a.btn-latest-custom:hover {
     color: #555555;
 }
 
-.classes{
+.classes {
     padding: 50px 0;
 }
 
@@ -529,6 +551,7 @@ footer {
     /* tentar aplicar esse padding: nas outras section */
     padding: 50px 0;
 }
+
 .teacher .card {
     background: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -542,7 +565,7 @@ footer {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.teacher img{
+.teacher img {
     opacity: 0.9;
     /* Ajuste o valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
     width: 100%;
@@ -571,6 +594,3 @@ footer {
 .offcanvas-body li {
     margin-top: 10px;
 }
-
-
-

@@ -10,7 +10,7 @@
             // consulta personalizada para pegar os três últimos posts
             $args = array(
                 'post_type'         => 'post',
-                'posts_per_page'    => 3,
+                'posts_per_page'    => 4,
                 'orderby'           => 'date',
                 'order'             => 'DESC'
             );
@@ -21,7 +21,7 @@
             if ($posts->have_posts()):
                 while ($posts->have_posts()) : $posts->the_post();
             ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3 d-flex justify-content-center text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center text-center">
                         <div class="card border" style="width:18rem">
 
                             <?php
