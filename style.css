@@ -18,13 +18,8 @@ Tags: education, children, school, preschool, kindergarten, childcare, learning,
 
 body {
     background-color: #ddd;
-    /* Substitui a fonte padrão que vem definida no boostrap. Lembrando que primeiro é definida a font-family pra todo site, depois se quisermo alterar em algum lugar especifico usar o font-style*/
-    /* nesse caso definimos a font poppins como principal, se nao for encontrada busca pela arial e assim sucessivamente*/
     font-family: 'Poppins', Arial, sans-serif;
 }
-
-
-
 
 .top-menu {
     background-color: #28a745;
@@ -95,7 +90,6 @@ body {
     /* Aumenta a sombra no hover */
 }
 
-
 /* estilo para o carroussel */
 .image-wrapper::before {
     content: '';
@@ -106,10 +100,7 @@ body {
     height: 100%;
     /* background-color: rgba(0, 0, 0, 0.3); */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
-
 }
-
-
 
 .custom-image {
     max-height: 500px;
@@ -153,7 +144,6 @@ a.btn:focus {
 }
 
 
-
 .title-mobile-custom {
     color: #23CC88;
 }
@@ -184,8 +174,6 @@ p.paragraph-custom {
     font-size: 1rem;
 }
 
-
-
 /* aplicando um estilo pesronalizado para cada imagem da section welcome.*/
 .image-custom-item-1 img {
     width: 100px;
@@ -198,8 +186,6 @@ p.paragraph-custom {
     background-image: linear-gradient(145deg, rgb(35, 204, 136) 0%, rgb(142, 207, 53) 100%);
     box-shadow: 0px 18px 30px 0px rgba(38, 204, 133, 0.36);
 }
-
-
 
 .image-custom-item-2 img {
     width: 100px;
@@ -260,19 +246,11 @@ p.paragraph-custom {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* p.text-item {
-    color: red;
-} */
-
 .about {
     /* background: linear-gradient(135deg, #23CC88 0%, #a1e9bf 100%); */
     background: linear-gradient(145deg, #a4d4a4, #79c9c9);
     /* Gradiente de verde */
     color: #ffffff;
-    /* Ajusta a cor do texto */
-    /* padding: 50px 20px; */
-    /* border-radius: 10px; */
-    /* padding: 10px 0; */
 }
 
 .about h2 {
@@ -287,20 +265,13 @@ p.paragraph-custom {
 }
 
 .about-image-custom {
-    /* max-height: 550px; */
-    /* Mantém a largura 100% responsiva */
     width: 100%;
     /* Garante que a imagem não seja distorcida */
     object-fit: cover;
     margin-top: 30px;
 }
 
-
-
-
 a.btn-about-custom {
-    /* background-color: #fff;
-    color: #23CC88; */
     background-color: #38c172;
     /* Verde vibrante */
     color: #fff;
@@ -318,7 +289,6 @@ a.btn-about-custom:hover {
     /* Pequeno zoom */
 }
 
-
 /* estilo as imagens da section classes */
 .widget-image-custom img {
     width: 100%;
@@ -327,7 +297,6 @@ a.btn-about-custom:hover {
     max-width: 300px;
     border-radius: 5px;
 }
-
 
 .ours-numbers {
     background: linear-gradient(145deg, #a4d4a4, #79c9c9);
@@ -354,7 +323,16 @@ a.btn-about-custom:hover {
 }
 
 
+.latests-news  {
+    padding: 50px 0;
+}
 
+
+.latests-news  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
 .latests-news .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -363,11 +341,6 @@ a.btn-about-custom:hover {
     /* padding: 20px; */
 }
 
-/* .latests-news .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} */
-
 .latests-news img {
     border-radius: 10px 10px 0 0;
 }
@@ -375,7 +348,6 @@ a.btn-about-custom:hover {
 .latests-news .btn {
     border-radius: 20px;
     padding: 10px 20px;
-
 }
 
 .latests-news .card-title {
@@ -388,8 +360,6 @@ a.btn-about-custom:hover {
     color: #6c757d;
     font-size: 0.9rem;
 }
-
-
 
 /* Aplica padding maior apenas nos parágrafos dentro do widget com a classe widget-image-custom */
 .widget-image-custom #class-infantil p {
@@ -412,11 +382,9 @@ a.btn-latest-custom:hover {
     background-color: #00394f;
 }
 
-
 .content-sigle-post-intens-custom {
     color: #00394f;
 }
-
 
 .content-single-post-custom {
     color: #555555;
@@ -455,7 +423,6 @@ a.btn-latest-custom:hover {
     line-height: 1.5;
 }
 
-
 img.custom-img-classes {
     opacity: 0.9;
     width: 100%;
@@ -465,7 +432,6 @@ img.custom-img-classes {
     object-fit: cover;
     /* Garante que a imagem preencha o espaço mantendo proporções */
 }
-
 
 .classes h2 {
     color: #00394f;
@@ -482,7 +448,6 @@ a.btn-class-custom {
 a.btn-class-custom:hover {
     background-color: #1EAE76;
 }
-
 
 footer {
     background-color: #28a745;
@@ -546,10 +511,15 @@ footer {
     margin-top: 120px;
 }
 
-
 .teacher {
     /* tentar aplicar esse padding: nas outras section */
     padding: 50px 0;
+}
+
+.teacher h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .teacher .card {
@@ -576,6 +546,7 @@ footer {
 
 .teacher .card-title {
     color: #23CC88;
+    font-family: 'Poppins', sans-serif;
 }
 
 .page-post {
@@ -586,10 +557,6 @@ footer {
     height: auto;
     width: 200px;
 }
-
-
-
-
 
 .offcanvas-body li {
     margin-top: 10px;
