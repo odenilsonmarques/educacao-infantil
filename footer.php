@@ -59,8 +59,8 @@
         </div>
         <div class="row">
             <div class="col mt-5 text-white text-center mb-4">
-                <p>2024 Escola Kinter. Todos os direitos reservados</p>
-                <p class="fs-6 fw-lighter">Desenvolvido por <a href="#">2pSoluções</a> </p>
+                <p>2024 Escola Briza. Todos os direitos reservados</p>
+                <p class="fs-6 fw-lighter ">Desenvolvido por <a href="#">2ps tech</a> </p>
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h2 class="card-title fs-3"><?php the_title(); ?></h2>
+                                    <h3 class="card-title fs-3"><?php the_title(); ?></h3>
                                     <p class="text-muted"><?php the_content(); ?></p>
                                     <p class="d-flex align-items-center content-sigle-post-intens-custom mt-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#23CC88" class="bi bi-person me-2" viewBox="0 0 16 16">

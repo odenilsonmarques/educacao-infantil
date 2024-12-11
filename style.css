@@ -18,7 +18,6 @@ Tags: education, children, school, preschool, kindergarten, childcare, learning,
 
 body {
     background-color: #ddd;
-    font-family: 'Poppins', Arial, sans-serif;
 }
 
 .top-menu {
@@ -54,13 +53,11 @@ body {
 /* Escolha a cor que deseja para o menu após o scroll */
 .main-menu.scrolled li a {
     color: #28a745;
-
 }
 
 /* Escolha a cor que deseja para o menu após o scroll */
 .main-menu.scrolled li a:hover {
     color: #333333;
-
 }
 
 .nav-item .btn-custom {
@@ -90,6 +87,10 @@ body {
     /* Aumenta a sombra no hover */
 }
 
+.carousel-inner{
+    border-radius: 10px; /* Mantém as bordas arredondadas */
+}
+
 /* estilo para o carroussel */
 .image-wrapper::before {
     content: '';
@@ -100,13 +101,15 @@ body {
     height: 100%;
     /* background-color: rgba(0, 0, 0, 0.3); */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    border-radius: 10px;
 }
 
-.custom-image {
-    max-height: 500px;
-    width: 100%;
-    /* Mantém a proporção da imagem sem distorção */
-    object-fit: cover;
+img.custom-image {
+    height: 500px; /* Define uma altura fixa consistente */
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    object-fit: cover; /* Corta a imagem para caber no contêiner sem distorcer */
+    object-position: center; /* Centraliza o conteúdo visível da imagem */
+    border-radius: 10px; /* Mantém as bordas arredondadas */
 }
 
 .carousel-caption.text-start {
@@ -142,7 +145,6 @@ a.btn:focus {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
 }
-
 
 .title-mobile-custom {
     color: #23CC88;
@@ -289,15 +291,6 @@ a.btn-about-custom:hover {
     /* Pequeno zoom */
 }
 
-/* estilo as imagens da section classes */
-.widget-image-custom img {
-    width: 100%;
-    height: auto;
-    /* Mantém a proporção da imagem */
-    max-width: 300px;
-    border-radius: 5px;
-}
-
 .ours-numbers {
     background: linear-gradient(145deg, #a4d4a4, #79c9c9);
 }
@@ -305,7 +298,6 @@ a.btn-about-custom:hover {
 .ours-numbers p {
     font-family: 'Poppins', sans-serif;
 }
-
 
 .ours-numbers img {
     background: rgba(255, 255, 255, 0.2);
@@ -361,16 +353,6 @@ a.btn-about-custom:hover {
     font-size: 0.9rem;
 }
 
-/* Aplica padding maior apenas nos parágrafos dentro do widget com a classe widget-image-custom */
-.widget-image-custom #class-infantil p {
-    padding-left: 20px;
-    padding-right: 20px;
-    /* Define o padding desejado */
-    font-size: 16px;
-    /* Ajuste opcional de tamanho da fonte */
-    line-height: 1.6;
-    /* Espaçamento entre linhas */
-}
 
 
 a.btn-latest-custom {
@@ -453,6 +435,17 @@ footer {
     background-color: #28a745;
 }
 
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover{
+   
+    color: #ddd;
+    text-decoration:underline;
+}
+
 .custom-image-size {
     width: 70%;
     /* Ajuste conforme necessário */
@@ -510,6 +503,22 @@ footer {
 .post {
     margin-top: 120px;
 }
+
+.post h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.post h3 {
+    color: #23CC88;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post p {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 .teacher {
     /* tentar aplicar esse padding: nas outras section */
